@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	 <!-- 数据源的配置 使用c3p0实现  guodong数据库 -->
+	 <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" dependency-check="none">
+	 	<property name="driverClass">
+	 		<value>${jdbc.driverClassName}</value>
+	 	</property>
+	 	<property name="jdbcUrl">
+	 		<value>${jdbc.url}</value>
+	 	</property>
+	 	<property name="user">
+	 		<value>${jdbc.username}</value>
+	 	</property>
+	 	<property name="password">
+	 		<value>${jdbc.password}</value>
+	 	</property>
+	 	<property name="initialPoolSize">
+	 		<value>${cpool.initialPoolSize}</value>
+	 	</property>
+	 	<property name="acquireIncrement">
+	 		<value>${cpool.acquireIncrement}</value>
+	 	</property>
+	 	<property name="minPoolSize">
+	 		<value>${cpool.minPoolSize}</value>
+	 	</property>
+	 	<property name="maxPoolSize">
+	 		<value>${cpool.maxPoolSize}</value>
+	 	</property>
+	 	<property name="maxIdleTime">
+	 		<value>${cpool.maxIdleTime}</value>
+	 	</property>
+	 	<property name="autoCommitOnClose">
+	 		<value>${cpool.autoCommitOnClose}</value>
+	 	</property>
+	 	
+	 	<property name="idleConnectionTestPeriod" value="${cpool.idleConnectionTestPeriod}" />
+	 	<property name="testConnectionOnCheckout" value="${cpool.testConnectionOnCheckout}" />
+	 	<property name="automaticTestTable" value="${cpool.automaticTestTable}" />
+	 </bean>
+<!-- 	<bean id="transactionManager" -->
+<!--         class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
+<!--         <property name="dataSource" ref="dataSource" />  -->
+<!--     </bean> -->
+</beans>
