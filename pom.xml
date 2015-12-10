@@ -45,6 +45,7 @@
 	<artifactId>c3p0</artifactId>
 	<version>0.9.1.2</version>
    </dependency>
+   
     <!-- Spring 3 dependencies -->
         <dependency>
             <groupId>org.springframework</groupId>
