@@ -13,6 +13,9 @@ public class RestfulResource {
 	@Autowired
 	RestService restService;
 	
+	public void show(){
+		System.out.println("Hello Component !");
+	}
 	@GET
 	@Path("say")
 	public String sayHello(){

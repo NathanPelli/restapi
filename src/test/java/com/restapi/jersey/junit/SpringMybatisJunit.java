@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.restapi.jersey.domain.User;
+import com.restapi.jersey.resources.RestfulResource;
 import com.restapi.jersey.service.UserService;
 
 public class SpringMybatisJunit {
@@ -32,7 +33,11 @@ public class SpringMybatisJunit {
         user.setAge(23);
         userService.insertUser(user);
 	}
-	
+	@Test
+	public void spring_component_test(){
+		RestfulResource restfulResource = (RestfulResource)context.getBean("restfulResource");
+		restfulResource.show();
+	}
 	@Test
     public void selectAll(){
         List<User> list = userService.selectAll();
