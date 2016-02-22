@@ -1,0 +1,5 @@
+该项目主要是用来测试RESTFUL Api的
+2015-12-25   圣诞节
+目前已集成spring、mybatis、jersey实现了普通的增删查改
+
+
