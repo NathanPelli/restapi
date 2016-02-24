@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.restapi.jersey.service.RestService;
 @Component
-@Path("demo")
+@Path("/demo")
 public class RestfulResource {
 	@Autowired
 	RestService restService;
@@ -17,7 +17,7 @@ public class RestfulResource {
 		System.out.println("Hello Component !");
 	}
 	@GET
-	@Path("say")
+	@Path("/say")
 	public String sayHello(){
 		return restService.sayHello();
 	}
