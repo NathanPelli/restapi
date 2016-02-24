@@ -23,7 +23,6 @@ import org.springframework.stereotype.Component;
 import com.restapi.jersey.service.RestService;
 @Component
 @Path("demo")
-@Produces("text/html")
 public class RestfulResource {
 	@Autowired
 	RestService restService;
